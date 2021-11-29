@@ -1,0 +1,301 @@
+.hero {
+    background-image: url("../imagenes/sabores-heladera-general-pequeña.jpg");
+    height: 70vh;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__txt {
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+    color: $clr-gris;
+    text-align: center;
+    padding: 1em;
+}
+
+.nuestros-sabores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    h2 {
+        color: $clr-marron-oscuro;
+        text-align: center;
+        font-weight: 650;
+        font-size: 1.5rem;
+        letter-spacing: 0.2em;
+        @include padLeRi;
+        margin-top: 1.5em;
+        margin-bottom: 0.8em;
+    }
+}
+
+.sabores__individuales {
+    p {
+        display: block;
+        width: 100%;
+        white-space: nowrap;
+        color: rgb(236, 134, 75);
+        text-align: center;
+        font-weight: 800;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        margin-bottom: 1em;
+    }
+    img {
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.664);
+    }
+}
+
+.lanzamiento {
+    @include padLeRi;
+    max-height: 25%;
+    background-color: $clr-gris;
+    border-radius: 0.25em;
+    box-shadow:rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include margTopBot;
+    margin-left: 2em;
+    margin-right: 2em;
+    h2 {
+        text-transform: uppercase;
+        font-weight: 650;
+        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 0.5em;
+                text-shadow:5px 5px 10px $clr-marron;
+    }
+    h3,
+    p {
+        font-size: 1em;
+        margin-bottom: 0.4em;
+        font-weight: 700;
+        padding: 0.5rem;
+        text-align: center;
+    }
+    > img {
+        border-radius: 0.2em;
+        box-shadow:rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        max-width: 1em;
+        margin-bottom: 2em;
+    }
+}
+
+.delivery {
+    @include padLeRi;
+    max-height: 25%;
+    max-height: 25%;
+    background-color: $clr-gris;
+    border-radius: 0.25em;
+    box-shadow: 0 0 50px 0 $clr-gris;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include margTopBot;
+    margin-left: 2em;
+    margin-right: 2em;
+    position: relative;
+    box-shadow:rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    h2 {
+        text-transform: uppercase;
+        font-weight: 650;
+        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 0.5em;
+        text-shadow:5px 5px 10px $clr-marron;
+    }
+    h3,
+    a {
+        font-size: 1em;
+        margin-bottom: 0.4em;
+        font-weight: 700;
+        padding: 0.5rem;
+        text-align: center;
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .enlace-contacto{
+        font-weight:bolder;
+        font-size:1.5em;
+    }
+
+    .zona-de-entrega{   
+	display: inline-block;
+	padding: 0.7em 1.3em;
+	border-radius: .2em;	
+	cursor: pointer;
+	background-color: $clr-marron;
+	color:$clr-cremita;
+	font-weight: 700;
+    box-shadow: 0 8px 16px 0 rgba(56, 37, 8, 0.5), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }   
+    .zona {
+        display: none;
+        position: relative;
+
+        a {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            font-size: 1.5rem;
+            color: $clr-marron-oscuro;
+        }
+    }
+
+    #zona-entrega:target {
+        display: block;
+        position: absolute;
+        border: 5px solid $clr-marron-oscuro;
+        border-radius: 0.5em;
+    }
+}
+
+//MEDIA QUERIES HERO//
+
+@media (min-width: 769px) {
+    .hero {
+        justify-content: left;
+    }
+    .hero__txt {
+        text-align: left;
+        font-size: 3rem;
+    }
+}
+@media (min-width: 1000px) {
+    .hero__txt {
+        text-align: left;
+        font-size: 4rem;
+    }
+
+    .hero__txt {
+        animation-duration: 3s;
+        animation-name: slidein;
+        animation-iteration-count: 3s;
+    }
+
+    @keyframes slidein {
+        from {
+            margin-left: 40%;
+            width: 300%;
+        }
+
+        to {
+            margin-left: 0%;
+            width: 100%;
+        }
+    }
+}
+
+//MEDIA QUERIES NUESTROS SABORES//
+
+@media (min-width: 700px) {
+    .nuestros-sabores {
+        h2 {
+            font-size: 2rem;
+            letter-spacing: 0.3em;
+        }
+    }
+
+    .nuestros-sabores__sabores {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .sabores__individuales {
+        width: 25%;
+        margin: 0.5em;
+        margin-left: 2em;
+        margin-right: 2em;
+        padding: 0.15em;
+        p {
+            font-size: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+@media (min-width: 950px) {
+    .nuestros-sabores__sabores {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: 2em;
+    }
+
+    .sabores__individuales {
+        width: 13%;
+        margin: 0.5em;
+        margin-left: 2em;
+        margin-right: 2em;
+        padding: 0.15em;
+    }
+
+    .lanzamiento {
+        flex-direction: row;
+        justify-content: space-around;
+        @include sections;
+        height: 250px;
+
+        h2,
+        h3,
+        p {
+            text-align: left;
+            padding: 0;
+        }
+
+        h2 {
+            margin-bottom: 1em;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 2em;
+            padding-bottom: 2em;
+
+            img {
+                border-radius: 0.2em;
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.664);
+                max-width: 16em;
+                margin-bottom: 1em;
+            }
+
+            p {
+                font-size: 1em;
+                margin-bottom: 0.4em;
+                font-weight: 700;
+            }
+        }
+    }
+    .delivery {
+        @include sections;
+        height: 250px;
+
+        h2 {
+            margin-bottom: 1em;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.postres-individual{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:15px;
+    margin-bottom:1em;
+
+    div{
+        text-align: center;
+        margin-bottom:2em;
+        margin-top:4em;
+        padding:1em;
+        background-color: $clr-gris;
+        border-radius: 0.20em;
+        box-shadow:rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+        h2{
+            margin-top: 0.5em;
+            font-weight: 600;
+        }
+
+        p{
+            text-align: center;
+        }
+
+        img{
+            border-radius: 0.20em;
+            max-height: 170px;
+        }
+    }
+}
+
+@media (min-width: 600px){
+    .postres-individual{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media (min-width: 1000px){
+    .others-sections{
+        @include sections;
+    }
+    
+    .postres-individual{
+        grid-template-columns:repeat(4,1fr);
+    }
+}

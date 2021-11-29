@@ -1,0 +1,60 @@
+.conocenos-centrado{
+    margin-bottom:2em;
+    margin-top:3em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.637);
+    padding:1em;
+    padding-bottom:3em;
+    
+    h2{
+        font-weight: 600;
+    }
+
+    h2, p{
+        text-align: center;
+        font-weight: 400;
+        padding: 0.5em;
+    }
+
+}
+
+.nosotros{
+    padding:2em;
+    background-color: rgba(184, 169, 169, 0.37);
+    border-radius: 0.20em;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.39);
+}
+
+.nuestros-clientes-contenedor{
+    border: rgba(184, 169, 169, 0.37) solid 3px;
+    border-radius: 0.20em;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.39);
+}
+
+.nuestros-clientes-tittle{
+    display:block;
+    padding:0.5em;
+    background-color: rgba(184, 169, 169, 0.37);
+    border-radius: 0.20em;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.39);
+}
+.nuestros-clientes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    padding:3em;
+}
+
+.carousel-inner{
+    width: 60% !important;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    background-color:  $clr-marron !important;
+}
+
+@media (min-width:700px){
+    .others-sections{
+        @include sections;
+    }
+}

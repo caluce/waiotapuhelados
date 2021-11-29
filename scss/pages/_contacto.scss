@@ -1,0 +1,98 @@
+.contactate {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+
+.foto-formulario {
+    margin-left: 4em;
+    margin-right: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    img {
+        border-radius: 0.2em;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.664);
+        margin-bottom: 2em;
+    }
+}
+
+.formulario-contacto {
+    flex: 1 0 250px;
+    padding: 0 2em;
+    background-color: rgba(184, 169, 169, 0.37);
+    border-radius: 0.2em;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.39);
+    text-align: left;
+
+    form {
+        margin-top: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        max-width: 90vw;
+
+        div {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            width: 100%;
+
+            p {
+                font-size: 1rem;
+                font-weight: 500;
+                letter-spacing: 0.2em;
+                margin-bottom: 0.1em;
+            }
+            label {
+                margin: 1em 0 0.25em;
+            }
+        }
+    }
+
+    button {
+        margin: 1em;
+    }
+}
+
+input,
+select,
+textarea {
+    padding: 1em;
+    border-radius: 0.25em;
+    border-color: $clr-marron-oscuro;
+}
+
+@media (min-width: 900px) {
+    .contactate {
+        text-align: left;
+    }
+    .foto-formulario {
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            margin-bottom: 0;
+            max-width: 90vw;
+        }
+    }
+}
+
+@media (min-width: 1050px) {
+    .others-sections {
+        @include sections;
+    }
+    .foto-formulario {
+        div {
+            max-width: unset;
+        }
+    }
+}

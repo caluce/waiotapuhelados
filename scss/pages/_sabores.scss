@@ -1,0 +1,216 @@
+.pd-x2 {
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+.others-sections{
+    margin-top:4em;
+    margin-bottom:4em;
+}
+
+.others-h1 {
+    border-bottom: 0.1em solid $clr-marca;
+    margin-bottom: 1em;
+    padding-bottom: 2em;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+}
+
+.sabores-centrado-title{
+    text-align: center;
+    font-weight: 600;
+    margin-bottom:1em;
+    margin-top:1.5em;
+}
+
+.sabores-centrado {
+    text-align: center;
+    margin-bottom:1em;
+    margin-top:1.5em;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+    gap:1em;
+
+    li{
+        color:$clr-marron-oscuro;
+        font-family: $clr-fuente-general;
+        font-weight: 400;
+        font-size: 0.9rem;
+        display: inline;
+        text-align: center;
+    }
+    .sabores-descripcion{
+        font-weight: 600;
+    }
+}
+
+#cremas, #chocolates, #dulce-de-leche, #especiales, #frutales{
+    background-color: $clr-gris;
+    border-radius: 0.20em;
+    box-shadow: 0 0 10px 0 $clr-gris;
+
+    &:target{
+        background-color: $clr-marron;
+        color: $clr-gris;
+    }
+}
+
+.sabores-descripcion{
+    font-weight: 500;
+    position: relative;
+    display:block;
+    cursor: pointer;
+}
+
+.sabores-descripcion-moka:hover::after{
+    content: "Helado de crema de café con Avellanas y escamas de chocolate";
+    position: absolute;
+    margin-left: -5px;
+    border-width: 4px;
+    border-style: solid;
+    width: 120px;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+    color: #ccc;
+    background: $clr-marron;
+    font-weight: bold;
+    z-index: 1;
+}
+.sabores-descripcion-super-sambayon:hover::after{
+        content: "Helado de yemas de huevos y oporto con almendras tostadas y caramelizadas";
+        position: absolute;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        width: 120px;
+        top: 100%;
+        left: 50%;
+        margin-left: -60px;
+        color: #ccc;
+        background: $clr-marron;
+        font-weight: bold;
+    }
+
+.sabores-descripcion-tentacion:hover::after{
+        content: "Helado de yemas de huevos y oporto con almendras tostadas y caramelizadas";
+        position: absolute;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        width: 120px;
+        top: 100%;
+        left: 50%;
+        margin-left: -60px;
+        color: #ccc;
+        background: $clr-marron;
+        font-weight: bold;
+    }
+
+.sabores-descripcion-suizo:hover::after{
+        content: "Helado de chocolate con dulce de leche repostero y granizado de chocolate";
+        position: absolute;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        width: 120px;
+        top: 100%;
+        left: 50%;
+        margin-left: -60px;
+        color: #ccc;
+        background: $clr-marron;
+        font-weight: bold;
+    }
+
+.sabores-descripcion-tentacion:hover::after{
+        content: "Helado de chocolate con almendras acarameladas, bomboncitos rellenos con dulce de leche y granizado de chocolate blanco";
+        position: absolute;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        width: 120px;
+        top: 100%;
+        left: 50%;
+        margin-left: -60px;
+        color: #ccc;
+        background: $clr-marron;
+        font-weight: bold;
+    }
+    
+.sabores-descripcion-caramel:hover::after{
+        content: "Helado de dulce de leche con crema de maní, caramelo salado y crocante de maní";
+        position: absolute;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        width: 120px;
+        top: 100%;
+        left: 50%;
+        margin-left: -60px;
+        color: #ccc;
+        background: $clr-marron;
+        font-weight: bold;
+    }
+    
+.sabores-descripcion-bombon:hover::after{
+        content: "Helado de dulce de leche con bombones de chocolate blanco rellenos con dulce de leche";
+        position: absolute;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        width: 120px;
+        top: 100%;
+        left: 50%;
+        margin-left: -60px;
+        color: #ccc;
+        background: $clr-marron;
+        font-weight: bold;
+    }
+    
+.sabores-descripcion-limon:hover::after{
+        content: "Helado de limón con menta y jengibre";
+        position: absolute;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        width: 120px;
+        top: 100%;
+        left: 50%;
+        margin-left: -60px;
+        color: #ccc;
+        background: $clr-marron;
+        font-weight: bold;
+    }
+
+.sabores-descripcion-multifruta:hover::after{
+        content: "Helado de frutas de estación";
+        position: absolute;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        width: 120px;
+        top: 100%;
+        left: 50%;
+        margin-left: -60px;
+        color: #ccc;
+        background: $clr-marron;
+        font-weight: bold;
+    }
+
+    summary{
+        outline: none;
+        cursor: pointer;
+    }
+
+.logo-sin-tacc{
+    width:2em;;
+}
+
+@media (min-width:700px){
+    .others-sections{
+        @include sections;
+    }
+}

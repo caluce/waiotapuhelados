@@ -1,0 +1,117 @@
+header {
+    background-color: $clr-crema;
+}
+
+nav {
+    border-bottom: 0.1em solid $clr-marron-oscuro;
+
+    .nav__menu {
+        background: $clr-crema;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+
+        li {
+            position: relative;
+            display: flex;
+
+            a {
+                min-width: 150px;
+                padding: 1em;
+                background: $clr-crema;
+                text-align: center;
+                color: $clr-marron-oscuro;
+
+                a:hover {
+                    color: $clr-marron;
+                    background: $clr-crema;
+                }
+            }
+        }
+    }
+}
+
+.menu__submenu {
+    display: none;
+}
+
+.header__logo {
+    width: 9%;
+    height: 9%;
+    display: block;
+    margin: auto;
+    transition: all 0.25 ease-in-out;
+    &:hover {
+        transform: scale(1.1, 1.1);
+    } 
+}
+
+.header__img {
+	margin-top: 0.5em;
+}
+
+//MEDIA QUERIES HEADER//
+
+@media (min-width: 600px) {
+    nav {
+        .nav__menu {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: auto;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+
+            li {
+                background: $clr-crema;
+
+                & a:hover {
+                    color: $clr-marron;
+                }
+
+                &:hover .menu__submenu {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    .menu__submenu {
+        display: none;
+        position: absolute;
+        top: 50px;
+        z-index: 1;
+
+        li a:hover {
+            color: $clr-marron;
+        }
+    }
+    
+    #cremas:target {
+        background-color: var(---clr-rosa);
+        color: var(---clr-rosa-claro);
+    }
+
+    #chocolates:target {
+        background-color: var(---clr-rosa);
+        color: var(---clr-rosa-claro);
+    }
+
+    #dulce-de-leche:target {
+        background-color: var(---clr-rosa);
+        color: var(---clr-rosa-claro);
+    }
+
+    #frutales:target {
+        background-color: var(---clr-rosa);
+        color: var(---clr-rosa-claro);
+    }
+
+    #especiales:target {
+        background-color: var(---clr-rosa);
+        color: var(---clr-rosa-claro);
+    }
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content= "Contactate con nosotros. Escribinos y contanos tu experiencia o envianos tu consulta. Pedí delivery o acercate a la sucursal.">
+        <meta name="keywords" content="heladería, heladería waiotapu, waiotapu, heladería caba, heladería recoleta, helado, helados, helados artesanales, artesanales, sabor, sabores, postre, postres, postre helado, postres helados, contacto, contactate con nosotros, contactate, consulta, formulario, delivery, sucursal">
+        <title>Contacto | Heladería Waiotapu</title>
+        <!-- <link rel="stylesheet" href="css/estilo-css.css" /> -->
+        <link rel="stylesheet" href="styles/main.css" />
+        <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="header__logo">
+                <a href="index.html"
+                    ><img
+                        class="header__img"
+                        src="./logo/logo-cucurucho.png"
+                        alt="Logo"
+                /></a>
+            </div>
+            <nav>
+                <ul class="nav__menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li>
+                        <a href="sabores.html">Sabores</a>
+                        <ul class="menu__submenu">
+                            <li><a href="sabores.html#cremas">Cremas</a></li>
+                            <li>
+                                <a href="sabores.html#chocolates">Chocolates</a>
+                            </li>
+                            <li>
+                                <a href="sabores.html#dulce-de-leche"
+                                    >Dulce de Leche</a
+                                >
+                            </li>
+                            <li>
+                                <a href="sabores.html#frutales">Frutales</a>
+                            </li>
+                            <li>
+                                <a href="sabores.html#especiales">Especiales</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="postres.html">Postres</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="donde-estamos.html">Donde estamos</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="pd-x2 others-sections">
+            <h1 class="main__h1">Contactate con nosotros</h1>
+            <div class="contactate">
+                <p>
+                    Escribinos y contanos tu experiencia. Todo lo que nos puedas aportar nos ayuda a crecer.
+                </p>
+                <p>
+                    Envianos tu consulta o comentario desde el siguiente formulario.
+                </p>
+                <p>Te responderemos con la mayor brevedad posible. ¡Gracias!</p>
+            </div>
+            <div class="foto-formulario">
+                <div>
+                    <img
+                        src="./imagenes/tres-cucuruchos-chocolate.jpg"
+                        alt="Tres cucuruchos con helado de chocolate"
+                    />
+                </div>
+                <div class="formulario-contacto">
+                    <form action="#" method="post">
+                        <div>
+                            <label for="nombre">Nombre*</label>
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                placeholder="Ej.: Juan Pérez"
+                                required
+                            />
+                        </div>
+                        <div>
+                            <label for="telefono">Teléfono</label>
+                            <input
+                                type="tel"
+                                id="telefono"
+                                name="telefono"
+                                placeholder="Ej.: 01143624403"
+                            />
+                        </div>
+                        <div>
+                            <label for="email">Email*</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="hola@hotmail.com"
+                                required
+                            />
+                        </div>
+                        <div>
+                            <label for="tipo-de-consulta"
+                                >Tipo de consulta*</label
+                            >
+                            <select
+                                name="tipo-de-consulta"
+                                id="tipo-de-consulta"
+                                required
+                            >
+                                <option value="" selected disabled>
+                                    Seleccione una opción
+                                </option>
+                                <option value="recursos-humanos">
+                                    Recursos Humanos
+                                </option>
+                                <option value="sugerencias">Sugerencias</option>
+                                <option value="quejas">Quejas</option>
+                                <option value="comentarios">Comentarios</option>
+                            </select>
+                        </div>
+                        <label for="mensaje">Mensaje*</label>
+                        <div>
+                            <textarea
+                                name="mensaje"
+                                id="mensaje"
+                                placeholder="Hola! Mi nombre es..."
+                                cols="50"
+                                rows="10"
+                                required
+                            ></textarea>
+                        </div>
+                        <div id="formulario-check">
+                            <label for="enviar-copia">
+                                <input
+                                    type="checkbox"
+                                    name="enviar-copia"
+                                    id="enviar-copia"
+                                    value="1"
+                                />
+                                Enviar copia a mi mail</label
+                            >
+                        </div>
+                        <button
+                            class="form-footer__btn form__btn--bg pd-x2"
+                            type="submit"
+                        >
+                            Enviar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer class="pd-x2">
+            <div class="footer__section">
+                <img class="footer__logo" src="./logo/logo-cucurucho.png" alt="Logo"/>
+                <div class="footer__div">
+                    <p>Horario</p>
+                    <p>Todos los días 12 PM- 01 AM</p>
+                </div>
+                <div class="footer__div">
+                    <p>Dirección</p>
+                    <p>Vicente López 2050 CABA</p>
+                </div>
+                <form>
+                    <div>
+                        <p>¡Suscribite a nuestro correo!</p>
+                    </div>
+                    <div>
+                        <div class="footer__div">
+                            <label hidden for="newsletter"
+                                >¡Suscribite a nuestro correo!</label
+                            >
+                            <input
+                                type="email"
+                                id="newsletter"
+                                name="newsletter"
+                                placeholder="Ingresá tu email"
+                                required
+                            />
+                        </div>
+                        <button class="form-footer__btn" type="submit">
+                            Suscribirme
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="footer__section--copy">
+                <p>&copy; 2021 Waiotapu Todos los derechos reservados</p>
+            </div>
+        </footer>
+    </body>
+</html>

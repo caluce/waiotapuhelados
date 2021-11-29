@@ -1,0 +1,20 @@
+.form-footer__btn {
+	background: $clr-gris;
+    border-color: $clr-marron-oscuro;
+	padding: 0.1em 1em;
+	border-radius: 0.5em;
+	cursor: pointer;
+	text-align: center;
+    color:$clr-marron-oscuro;
+    font-weight: 500;
+    max-height:70%;
+	box-shadow: 0 8px 16px 0 rgba(56, 37, 8, 0.5), 0 6px 20px 0 rgba(0,0,0,0.19);
+	transition-duration: 0.4s;
+	&:hover {
+		background: $clr-marron;
+		color:$clr-gris;
+	}
+}
+//.form__btn--bg{
+//background: $clr-crema;
+//}

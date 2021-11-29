@@ -1,0 +1,45 @@
+$clr-fuente-titulos: "Open sans", sans-serif;
+$clr-fuente-general: "Poppins", sans-serif;
+
+h1,h2,h3{
+    font-family: $clr-fuente-titulos;
+}
+
+h2 {
+    color: $clr-marron;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+h3 {
+    color: $clr-marron-oscuro;
+    opacity: 0.7;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+p, a, input, select, textarea, button, label,
+.sabores-centrado li {
+    color: $clr-marron-oscuro;
+    font-family: $clr-fuente-general;
+    font-size: 0.9rem;
+}
+
+.enlace-contacto, .nav__menu{
+    li {
+        a{
+            font-weight:900;  
+        }
+    }
+}
+
+.main__h1 {
+    border-bottom: 0.1em solid $clr-marron;
+    margin-bottom: 1em;
+    padding-bottom: 2em;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: $clr-marron-oscuro;
+}
