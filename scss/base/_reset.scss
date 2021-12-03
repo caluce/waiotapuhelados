@@ -17,3 +17,10 @@ body {
     background-color: #ffffff;
 }
 
+.pd-x2 {
+    @include px;
+}
+
+.others-sections{
+    @include my;
+}

@@ -10,12 +10,12 @@ box-shadow: $h $v $b $s $c;
 	background-repeat: no-repeat;
 }
 
-@mixin padLeRi {
+@mixin px {
 	padding-left: 2em;
 	padding-right: 2em;
 }
 
-@mixin margTopBot {
+@mixin my {
     margin-top:4em;
     margin-bottom:4em;
 }
@@ -26,4 +26,19 @@ box-shadow: $h $v $b $s $c;
 	margin-bottom:4em;
 	margin-left:10em;
 	margin-right:10em;
+}
+
+@mixin descripcion{
+	position: absolute;
+    margin-left: -5px;
+    border-width: 4px;
+    border-style: solid;
+    width: 120px;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+    color: #ccc;
+    background: $clr-marron;
+    font-weight: bold;
+    z-index: 1;
 }

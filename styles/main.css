@@ -19,6 +19,16 @@ body {
   background-color: #ffffff;
 }
 
+.pd-x2 {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.others-sections {
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
 h1, h2, h3 {
   font-family: "Open sans", sans-serif;
 }
@@ -58,7 +68,7 @@ p, a, input, select, textarea, button, label,
   color: #78451A;
 }
 
-.form-footer__btn {
+.btn {
   background: #DFE0DF;
   border-color: #78451A;
   padding: 0.1em 1em;
@@ -74,7 +84,28 @@ p, a, input, select, textarea, button, label,
           transition-duration: 0.4s;
 }
 
-.form-footer__btn:hover {
+.btn:hover {
+  background: #B68976;
+  color: #DFE0DF;
+}
+
+.footer__btn {
+  background: #DFE0DF;
+  border-color: #78451A;
+  padding: 0.1em 1em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  text-align: center;
+  color: #78451A;
+  font-weight: 500;
+  max-height: 70%;
+  -webkit-box-shadow: 0 8px 16px 0 rgba(56, 37, 8, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 8px 16px 0 rgba(56, 37, 8, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.footer__btn:hover {
   background: #B68976;
   color: #DFE0DF;
 }
@@ -103,6 +134,7 @@ nav .nav__menu {
       -ms-flex-align: center;
           align-items: center;
   margin: 0;
+  padding: 0;
 }
 
 nav .nav__menu li {
@@ -468,7 +500,7 @@ footer form div p {
   margin-bottom: 2em;
 }
 
-.formulario-contacto {
+.foto-formulario .formulario-contacto {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 250px;
           flex: 1 0 250px;
@@ -480,7 +512,7 @@ footer form div p {
   text-align: left;
 }
 
-.formulario-contacto form {
+.foto-formulario .formulario-contacto form {
   margin-top: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -499,7 +531,7 @@ footer form div p {
   max-width: 90vw;
 }
 
-.formulario-contacto form div {
+.foto-formulario .formulario-contacto form div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -513,27 +545,27 @@ footer form div p {
   width: 100%;
 }
 
-.formulario-contacto form div p {
+.foto-formulario .formulario-contacto form div p {
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.2em;
   margin-bottom: 0.1em;
 }
 
-.formulario-contacto form div label {
+.foto-formulario .formulario-contacto form div label {
   margin: 1em 0 0.25em;
 }
 
-.formulario-contacto button {
-  margin: 1em;
-}
-
-input,
-select,
-textarea {
+.foto-formulario .formulario-contacto input,
+.foto-formulario .formulario-contacto select,
+.foto-formulario .formulario-contacto textarea {
   padding: 1em;
   border-radius: 0.25em;
   border-color: #78451A;
+}
+
+.foto-formulario .formulario-contacto button {
+  margin: 1em;
 }
 
 @media (min-width: 900px) {
@@ -651,7 +683,7 @@ textarea {
   margin: 3em;
 }
 
-iframe {
+.google-maps-section iframe {
   background-color: rgba(184, 169, 169, 0.37);
   border-radius: 0.20em;
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.39);
@@ -1128,12 +1160,8 @@ iframe {
   padding: 3em;
 }
 
-.carousel-inner {
-  width: 60% !important;
-}
-
-.carousel-control-next-icon, .carousel-control-prev-icon {
-  background-color: #B68976 !important;
+.nuestros-clientes-contenedor {
+  display: none;
 }
 
 @media (min-width: 700px) {
@@ -1143,6 +1171,18 @@ iframe {
     margin-bottom: 4em;
     margin-left: 10em;
     margin-right: 10em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nuestros-clientes-contenedor {
+    display: block;
+  }
+  .carousel-inner {
+    width: 60% !important;
+  }
+  .carousel-control-next-icon, .carousel-control-prev-icon {
+    background-color: #B68976 !important;
   }
 }
 
@@ -1201,27 +1241,6 @@ iframe {
   }
 }
 
-.pd-x2 {
-  padding-left: 2em;
-  padding-right: 2em;
-}
-
-.others-sections {
-  margin-top: 4em;
-  margin-bottom: 4em;
-}
-
-.others-h1 {
-  border-bottom: 0.1em solid #ff2c00;
-  margin-bottom: 1em;
-  padding-bottom: 2em;
-  font-weight: 700;
-  font-size: 2rem;
-  text-align: center;
-  letter-spacing: 0.4em;
-  text-transform: uppercase;
-}
-
 .sabores-centrado-title {
   text-align: center;
   font-weight: 600;
@@ -1241,12 +1260,29 @@ iframe {
 }
 
 .sabores-centrado li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #78451A;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 0.9rem;
-  display: inline;
   text-align: center;
+}
+
+.sabores-centrado li .logo-sin-tacc {
+  width: 25px;
+}
+
+.sabores-centrado li p {
+  display: inline-block;
+  width: 50%;
 }
 
 .sabores-centrado .sabores-descripcion {
@@ -1292,7 +1328,7 @@ iframe {
   content: "Helado de yemas de huevos y oporto con almendras tostadas y caramelizadas";
   position: absolute;
   margin-left: -5px;
-  border-width: 5px;
+  border-width: 4px;
   border-style: solid;
   width: 120px;
   top: 100%;
@@ -1301,13 +1337,14 @@ iframe {
   color: #ccc;
   background: #B68976;
   font-weight: bold;
+  z-index: 1;
 }
 
 .sabores-descripcion-tentacion:hover::after {
   content: "Helado de yemas de huevos y oporto con almendras tostadas y caramelizadas";
   position: absolute;
   margin-left: -5px;
-  border-width: 5px;
+  border-width: 4px;
   border-style: solid;
   width: 120px;
   top: 100%;
@@ -1316,13 +1353,14 @@ iframe {
   color: #ccc;
   background: #B68976;
   font-weight: bold;
+  z-index: 1;
 }
 
 .sabores-descripcion-suizo:hover::after {
   content: "Helado de chocolate con dulce de leche repostero y granizado de chocolate";
   position: absolute;
   margin-left: -5px;
-  border-width: 5px;
+  border-width: 4px;
   border-style: solid;
   width: 120px;
   top: 100%;
@@ -1331,13 +1369,14 @@ iframe {
   color: #ccc;
   background: #B68976;
   font-weight: bold;
+  z-index: 1;
 }
 
 .sabores-descripcion-tentacion:hover::after {
   content: "Helado de chocolate con almendras acarameladas, bomboncitos rellenos con dulce de leche y granizado de chocolate blanco";
   position: absolute;
   margin-left: -5px;
-  border-width: 5px;
+  border-width: 4px;
   border-style: solid;
   width: 120px;
   top: 100%;
@@ -1346,13 +1385,14 @@ iframe {
   color: #ccc;
   background: #B68976;
   font-weight: bold;
+  z-index: 1;
 }
 
 .sabores-descripcion-caramel:hover::after {
   content: "Helado de dulce de leche con crema de maní, caramelo salado y crocante de maní";
   position: absolute;
   margin-left: -5px;
-  border-width: 5px;
+  border-width: 4px;
   border-style: solid;
   width: 120px;
   top: 100%;
@@ -1361,13 +1401,14 @@ iframe {
   color: #ccc;
   background: #B68976;
   font-weight: bold;
+  z-index: 1;
 }
 
 .sabores-descripcion-bombon:hover::after {
   content: "Helado de dulce de leche con bombones de chocolate blanco rellenos con dulce de leche";
   position: absolute;
   margin-left: -5px;
-  border-width: 5px;
+  border-width: 4px;
   border-style: solid;
   width: 120px;
   top: 100%;
@@ -1376,13 +1417,14 @@ iframe {
   color: #ccc;
   background: #B68976;
   font-weight: bold;
+  z-index: 1;
 }
 
 .sabores-descripcion-limon:hover::after {
   content: "Helado de limón con menta y jengibre";
   position: absolute;
   margin-left: -5px;
-  border-width: 5px;
+  border-width: 4px;
   border-style: solid;
   width: 120px;
   top: 100%;
@@ -1391,13 +1433,14 @@ iframe {
   color: #ccc;
   background: #B68976;
   font-weight: bold;
+  z-index: 1;
 }
 
 .sabores-descripcion-multifruta:hover::after {
   content: "Helado de frutas de estación";
   position: absolute;
   margin-left: -5px;
-  border-width: 5px;
+  border-width: 4px;
   border-style: solid;
   width: 120px;
   top: 100%;
@@ -1406,15 +1449,7 @@ iframe {
   color: #ccc;
   background: #B68976;
   font-weight: bold;
-}
-
-summary {
-  outline: none;
-  cursor: pointer;
-}
-
-.logo-sin-tacc {
-  width: 2em;
+  z-index: 1;
 }
 
 @media (min-width: 700px) {

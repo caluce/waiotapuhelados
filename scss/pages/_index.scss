@@ -8,15 +8,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.hero__txt {
+    &__txt {
     display: block;
     font-size: 2rem;
     font-weight: 600;
     color: $clr-gris;
     text-align: center;
     padding: 1em;
+    }
 }
 
 .nuestros-sabores {
@@ -30,7 +29,7 @@
         font-weight: 650;
         font-size: 1.5rem;
         letter-spacing: 0.2em;
-        @include padLeRi;
+        @include px;
         margin-top: 1.5em;
         margin-bottom: 0.8em;
     }
@@ -55,7 +54,7 @@
 }
 
 .lanzamiento {
-    @include padLeRi;
+    @include px;
     max-height: 25%;
     background-color: $clr-gris;
     border-radius: 0.25em;
@@ -64,7 +63,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    @include margTopBot;
+    @include my;
     margin-left: 2em;
     margin-right: 2em;
     h2 {
@@ -73,7 +72,7 @@
         font-size: 1.5rem;
         text-align: center;
         margin-top: 0.5em;
-                text-shadow:5px 5px 10px $clr-marron;
+        text-shadow:5px 5px 10px $clr-marron;
     }
     h3,
     p {
@@ -92,7 +91,7 @@
 }
 
 .delivery {
-    @include padLeRi;
+    @include px;
     max-height: 25%;
     max-height: 25%;
     background-color: $clr-gris;
@@ -102,7 +101,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    @include margTopBot;
+    @include my;
     margin-left: 2em;
     margin-right: 2em;
     position: relative;

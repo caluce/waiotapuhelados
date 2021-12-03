@@ -42,14 +42,14 @@
     flex-direction: row;
     justify-content: space-around;
     margin:3em;
-}
 
-iframe{
-    background-color: rgba(184, 169, 169, 0.37);
-    border-radius: 0.20em;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.39);
-    text-align: left;
-    max-width: 99vw;
+    iframe{
+        background-color: rgba(184, 169, 169, 0.37);
+        border-radius: 0.20em;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.39);
+        text-align: left;
+        max-width: 99vw;
+    }
 }
 
 @media (min-width: 700px){
@@ -62,8 +62,7 @@ iframe{
         justify-content: space-around;
         align-items: flex-start;
         div{
-            padding-left: 2em;
-            padding-right: 2em;
+            @include px;
         }
     }
 }

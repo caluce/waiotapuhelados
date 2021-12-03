@@ -39,16 +39,25 @@
     padding:3em;
 }
 
-.carousel-inner{
-    width: 60% !important;
-}
-
-.carousel-control-next-icon, .carousel-control-prev-icon{
-    background-color:  $clr-marron !important;
+.nuestros-clientes-contenedor{
+    display:none;
 }
 
 @media (min-width:700px){
     .others-sections{
         @include sections;
     }
+}
+
+@media (min-width:1200px){
+    .nuestros-clientes-contenedor{
+        display:block;
+    }
+    .carousel-inner{
+        width: 60% !important;
+    }
+
+    .carousel-control-next-icon, .carousel-control-prev-icon{
+        background-color:  $clr-marron !important;
+    }    
 }
