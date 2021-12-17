@@ -85,43 +85,51 @@ footer {
     footer {
         text-align: center;
         margin: 0.03em;
-    }
 
-    .footer__section {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        img {
+        .footer__section {
+            display: flex;
+            flex-direction: row;
             justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            img {
+                justify-content: space-between;
+            }
+            * {
+                order: 1;
+            }
+            form p {
+                font-size: 0.96rem;
+            }
         }
-        * {
-            order: 1;
+
+        .footer__div {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-right: 0.5em;
+
         }
-        form p {
-            font-size: 0.96rem;
+
+        .footer__info{
+            margin-top: 2em;
+            p{
+            margin-bottom: 0;
+            }
         }
-    }
 
-    .footer__div {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-right: 0.5em;
+        .footer__logo {
+            width: 7%;
+            height: 7%;
+        }
 
-    }
-    .footer__logo {
-        width: 7%;
-        height: 7%;
-    }
-
-    .footer__section--copy{
-        width:100%;
-        display: flex;
-        justify-content: flex-end;
+        .footer__section--copy{
+            width:100%;
+            display: flex;
+            justify-content: flex-end;
+        }
     }
 }
 
@@ -132,12 +140,12 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-    }
 
-    .footer__section {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        .footer__section {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 }

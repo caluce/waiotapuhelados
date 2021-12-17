@@ -1,7 +1,7 @@
 .conocenos-centrado{
     margin-bottom:2em;
     margin-top:3em;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.637);
+    border-bottom: 1px solid $clr-marron-oscuro;
     padding:1em;
     padding-bottom:3em;
     
@@ -23,24 +23,24 @@
     border-radius: 0.20em;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.39);
 }
-
-.nuestros-clientes-tittle{
-    display:block;
-    padding:0.5em;
-    background-color: rgba(184, 169, 169, 0.37);
-    border-radius: 0.20em;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.39);
-}
-.nuestros-clientes{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50%;
-    padding:3em;
-}
-
 .nuestros-clientes-contenedor{
     display:none;
+
+    .nuestros-clientes-tittle{
+        display:block;
+        padding:0.5em;
+        background-color: rgba(184, 169, 169, 0.37);
+        border-radius: 0.20em;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.39);
+    }
+
+    .nuestros-clientes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+        padding:3em;
+    }
 }
 
 @media (min-width:700px){
@@ -52,12 +52,13 @@
 @media (min-width:1200px){
     .nuestros-clientes-contenedor{
         display:block;
-    }
-    .carousel-inner{
-        width: 60% !important;
-    }
+    
+        .carousel-inner{
+            width: 60% !important;
+        }
 
-    .carousel-control-next-icon, .carousel-control-prev-icon{
-        background-color:  $clr-marron !important;
-    }    
+        .carousel-control-next-icon, .carousel-control-prev-icon{
+            background-color:  $clr-marron !important;
+        }    
+    }
 }

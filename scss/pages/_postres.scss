@@ -36,11 +36,11 @@
 }
 
 @media (min-width: 1000px){
-    .others-sections{
+    .postres{
         @include sections;
-    }
     
-    .postres-individual{
-        grid-template-columns:repeat(4,1fr);
+        .postres-individual{
+            grid-template-columns:repeat(4,1fr);
+        }
     }
 }

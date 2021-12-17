@@ -68,7 +68,7 @@ p, a, input, select, textarea, button, label,
   color: #78451A;
 }
 
-.btn {
+.form__btn {
   background: #DFE0DF;
   border-color: #78451A;
   padding: 0.1em 1em;
@@ -84,28 +84,7 @@ p, a, input, select, textarea, button, label,
           transition-duration: 0.4s;
 }
 
-.btn:hover {
-  background: #B68976;
-  color: #DFE0DF;
-}
-
-.footer__btn {
-  background: #DFE0DF;
-  border-color: #78451A;
-  padding: 0.1em 1em;
-  border-radius: 0.5em;
-  cursor: pointer;
-  text-align: center;
-  color: #78451A;
-  font-weight: 500;
-  max-height: 70%;
-  -webkit-box-shadow: 0 8px 16px 0 rgba(56, 37, 8, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 8px 16px 0 rgba(56, 37, 8, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
-}
-
-.footer__btn:hover {
+.form__btn:hover {
   background: #B68976;
   color: #DFE0DF;
 }
@@ -114,11 +93,29 @@ header {
   background-color: #DFE0DF;
 }
 
-nav {
+header .header__logo {
+  width: 9%;
+  height: 9%;
+  display: block;
+  margin: auto;
+  -webkit-transition: all 0.25 ease-in-out;
+  transition: all 0.25 ease-in-out;
+}
+
+header .header__logo:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+header .header__logo .header__img {
+  margin-top: 0.5em;
+}
+
+header nav {
   border-bottom: 0.1em solid #78451A;
 }
 
-nav .nav__menu {
+header nav .nav__menu {
   background: #DFE0DF;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -137,14 +134,14 @@ nav .nav__menu {
   padding: 0;
 }
 
-nav .nav__menu li {
+header nav .nav__menu li {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-nav .nav__menu li a {
+header nav .nav__menu li a {
   min-width: 150px;
   padding: 1em;
   background: #DFE0DF;
@@ -152,35 +149,17 @@ nav .nav__menu li a {
   color: #78451A;
 }
 
-nav .nav__menu li a a:hover {
+header nav .nav__menu li a a:hover {
   color: #B68976;
   background: #DFE0DF;
 }
 
-.menu__submenu {
+header nav .nav__menu li .menu__submenu {
   display: none;
 }
 
-.header__logo {
-  width: 9%;
-  height: 9%;
-  display: block;
-  margin: auto;
-  -webkit-transition: all 0.25 ease-in-out;
-  transition: all 0.25 ease-in-out;
-}
-
-.header__logo:hover {
-  -webkit-transform: scale(1.1, 1.1);
-          transform: scale(1.1, 1.1);
-}
-
-.header__img {
-  margin-top: 0.5em;
-}
-
 @media (min-width: 600px) {
-  nav .nav__menu {
+  header nav .nav__menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -194,13 +173,13 @@ nav .nav__menu li a a:hover {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
   }
-  nav .nav__menu li {
+  header nav .nav__menu li {
     background: #DFE0DF;
   }
-  nav .nav__menu li a:hover {
+  header nav .nav__menu li a:hover {
     color: #B68976;
   }
-  nav .nav__menu li:hover .menu__submenu {
+  header nav .nav__menu li:hover .menu__submenu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -212,34 +191,54 @@ nav .nav__menu li a a:hover {
         -ms-flex-align: center;
             align-items: center;
   }
-  .menu__submenu {
+  header .menu__submenu {
     display: none;
     position: absolute;
     top: 50px;
     z-index: 1;
   }
-  .menu__submenu li a:hover {
+  header .menu__submenu li a:hover {
     color: #B68976;
   }
-  #cremas:target {
+  header .menu__submenu #cremas:target {
     background-color: var(---clr-rosa);
     color: var(---clr-rosa-claro);
   }
-  #chocolates:target {
+  header .menu__submenu #chocolates:target {
     background-color: var(---clr-rosa);
     color: var(---clr-rosa-claro);
   }
-  #dulce-de-leche:target {
+  header .menu__submenu #dulce-de-leche:target {
     background-color: var(---clr-rosa);
     color: var(---clr-rosa-claro);
   }
-  #frutales:target {
+  header .menu__submenu #frutales:target {
     background-color: var(---clr-rosa);
     color: var(---clr-rosa-claro);
   }
-  #especiales:target {
+  header .menu__submenu #especiales:target {
     background-color: var(---clr-rosa);
     color: var(---clr-rosa-claro);
+  }
+}
+
+@media (min-width: 749px) {
+  nav .nav__menu {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  nav .nav__menu li a {
+    min-width: 120px;
+  }
+}
+
+@media (min-width: 900px) {
+  nav .nav__menu {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  nav .nav__menu li a {
+    min-width: 150px;
   }
 }
 
@@ -374,7 +373,7 @@ footer form div p {
     text-align: center;
     margin: 0.03em;
   }
-  .footer__section {
+  footer .footer__section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -390,20 +389,20 @@ footer form div p {
             align-items: center;
     width: 100%;
   }
-  .footer__section img {
+  footer .footer__section img {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .footer__section * {
+  footer .footer__section * {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
   }
-  .footer__section form p {
+  footer .footer__section form p {
     font-size: 0.96rem;
   }
-  .footer__div {
+  footer .footer__div {
     text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -420,11 +419,17 @@ footer form div p {
             justify-content: center;
     padding-right: 0.5em;
   }
-  .footer__logo {
+  footer .footer__info {
+    margin-top: 2em;
+  }
+  footer .footer__info p {
+    margin-bottom: 0;
+  }
+  footer .footer__logo {
     width: 7%;
     height: 7%;
   }
-  .footer__section--copy {
+  footer .footer__section--copy {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -449,7 +454,7 @@ footer form div p {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
-  .footer__section {
+  footer .footer__section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -480,9 +485,9 @@ footer form div p {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -497,14 +502,14 @@ footer form div p {
   border-radius: 0.2em;
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.664);
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.664);
-  margin-bottom: 2em;
+  margin-top: 4em;
 }
 
 .foto-formulario .formulario-contacto {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 250px;
           flex: 1 0 250px;
-  padding: 0 2em;
+  padding: 0 1em;
   background-color: rgba(184, 169, 169, 0.37);
   border-radius: 0.2em;
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.39);
@@ -513,7 +518,7 @@ footer form div p {
 }
 
 .foto-formulario .formulario-contacto form {
-  margin-top: 1em;
+  margin-bottom: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -585,13 +590,14 @@ footer form div p {
             align-items: center;
   }
   .foto-formulario img {
+    margin-top: 0;
     margin-bottom: 0;
     max-width: 90vw;
   }
 }
 
 @media (min-width: 1050px) {
-  .others-sections {
+  .contacto {
     padding: 1em;
     margin-top: 4em;
     margin-bottom: 4em;
@@ -637,6 +643,8 @@ footer form div p {
 
 .donde-estamos-section div h2 {
   font-weight: 800;
+  display: block;
+  margin-top: 2em;
 }
 
 .donde-estamos-section div .enlace-contacto {
@@ -692,15 +700,15 @@ footer form div p {
   max-width: 99vw;
 }
 
-@media (min-width: 700px) {
-  .others-sections {
+@media (min-width: 1250px) {
+  .donde-estamos {
     padding: 1em;
     margin-top: 4em;
     margin-bottom: 4em;
     margin-left: 10em;
     margin-right: 10em;
   }
-  .donde-estamos-section {
+  .donde-estamos .donde-estamos-section {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -711,7 +719,7 @@ footer form div p {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  .donde-estamos-section div {
+  .donde-estamos .donde-estamos-section div {
     padding-left: 2em;
     padding-right: 2em;
   }
@@ -770,7 +778,7 @@ footer form div p {
   margin-bottom: 0.8em;
 }
 
-.sabores__individuales p {
+.nuestros-sabores .sabores__individuales p {
   display: block;
   width: 100%;
   white-space: nowrap;
@@ -783,7 +791,7 @@ footer form div p {
   margin-bottom: 1em;
 }
 
-.sabores__individuales img {
+.nuestros-sabores .sabores__individuales img {
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.664);
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.664);
 }
@@ -959,8 +967,6 @@ footer form div p {
   .hero__txt {
     text-align: left;
     font-size: 4rem;
-  }
-  .hero__txt {
     -webkit-animation-duration: 3s;
             animation-duration: 3s;
     -webkit-animation-name: slidein;
@@ -995,7 +1001,7 @@ footer form div p {
     font-size: 2rem;
     letter-spacing: 0.3em;
   }
-  .nuestros-sabores__sabores {
+  .nuestros-sabores .nuestros-sabores__sabores {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1010,14 +1016,14 @@ footer form div p {
             justify-content: center;
     margin: auto;
   }
-  .sabores__individuales {
+  .nuestros-sabores .nuestros-sabores__sabores .sabores__individuales {
     width: 25%;
     margin: 0.5em;
     margin-left: 2em;
     margin-right: 2em;
     padding: 0.15em;
   }
-  .sabores__individuales p {
+  .nuestros-sabores .nuestros-sabores__sabores .sabores__individuales p {
     font-size: 1rem;
     margin: 0;
     padding: 0;
@@ -1025,7 +1031,7 @@ footer form div p {
 }
 
 @media (min-width: 950px) {
-  .nuestros-sabores__sabores {
+  .nuestros-sabores .nuestros-sabores__sabores {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1039,7 +1045,7 @@ footer form div p {
     margin: auto;
     margin-bottom: 2em;
   }
-  .sabores__individuales {
+  .nuestros-sabores .nuestros-sabores__sabores .sabores__individuales {
     width: 13%;
     margin: 0.5em;
     margin-left: 2em;
@@ -1114,7 +1120,7 @@ footer form div p {
 .conocenos-centrado {
   margin-bottom: 2em;
   margin-top: 3em;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.637);
+  border-bottom: 1px solid #78451A;
   padding: 1em;
   padding-bottom: 3em;
 }
@@ -1137,7 +1143,11 @@ footer form div p {
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.39);
 }
 
-.nuestros-clientes-tittle {
+.nuestros-clientes-contenedor {
+  display: none;
+}
+
+.nuestros-clientes-contenedor .nuestros-clientes-tittle {
   display: block;
   padding: 0.5em;
   background-color: rgba(184, 169, 169, 0.37);
@@ -1146,7 +1156,7 @@ footer form div p {
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.39);
 }
 
-.nuestros-clientes {
+.nuestros-clientes-contenedor .nuestros-clientes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1158,10 +1168,6 @@ footer form div p {
           align-items: center;
   height: 50%;
   padding: 3em;
-}
-
-.nuestros-clientes-contenedor {
-  display: none;
 }
 
 @media (min-width: 700px) {
@@ -1178,10 +1184,10 @@ footer form div p {
   .nuestros-clientes-contenedor {
     display: block;
   }
-  .carousel-inner {
+  .nuestros-clientes-contenedor .carousel-inner {
     width: 60% !important;
   }
-  .carousel-control-next-icon, .carousel-control-prev-icon {
+  .nuestros-clientes-contenedor .carousel-control-next-icon, .nuestros-clientes-contenedor .carousel-control-prev-icon {
     background-color: #B68976 !important;
   }
 }
@@ -1228,14 +1234,14 @@ footer form div p {
 }
 
 @media (min-width: 1000px) {
-  .others-sections {
+  .postres {
     padding: 1em;
     margin-top: 4em;
     margin-bottom: 4em;
     margin-left: 10em;
     margin-right: 10em;
   }
-  .postres-individual {
+  .postres .postres-individual {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
   }
@@ -1257,6 +1263,18 @@ footer form div p {
   -ms-grid-columns: (minmax(100px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 1em;
+}
+
+.sabores-centrado #cremas, .sabores-centrado #chocolates, .sabores-centrado #dulce-de-leche, .sabores-centrado #especiales, .sabores-centrado #frutales {
+  background-color: #DFE0DF;
+  border-radius: 0.20em;
+  -webkit-box-shadow: 0 0 10px 0 #DFE0DF;
+          box-shadow: 0 0 10px 0 #DFE0DF;
+}
+
+.sabores-centrado #cremas:target, .sabores-centrado #chocolates:target, .sabores-centrado #dulce-de-leche:target, .sabores-centrado #especiales:target, .sabores-centrado #frutales:target {
+  background-color: #B68976;
+  color: #DFE0DF;
 }
 
 .sabores-centrado li {
@@ -1302,7 +1320,6 @@ footer form div p {
 }
 
 .sabores-descripcion {
-  font-weight: 500;
   position: relative;
   display: block;
   cursor: pointer;

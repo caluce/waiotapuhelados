@@ -12,6 +12,18 @@
     display:grid;
     grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
     gap:1em;
+
+    #cremas, #chocolates, #dulce-de-leche, #especiales, #frutales{
+        background-color: $clr-gris;
+        border-radius: 0.20em;
+        box-shadow: 0 0 10px 0 $clr-gris;
+    
+        &:target{
+            background-color: $clr-marron;
+            color: $clr-gris;
+        }
+    }
+    
     li{
         display: flex;
         justify-content: center;
@@ -30,9 +42,9 @@
             width: 50%;
         }       
     }
-    .sabores-descripcion{
-        font-weight: 600;
-    }
+        .sabores-descripcion{
+            font-weight: 600;
+        }
 }
 
 #cremas, #chocolates, #dulce-de-leche, #especiales, #frutales{
@@ -47,7 +59,6 @@
 }
 
 .sabores-descripcion{
-    font-weight: 500;
     position: relative;
     display:block;
     cursor: pointer;

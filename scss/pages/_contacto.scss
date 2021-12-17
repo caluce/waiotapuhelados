@@ -9,7 +9,7 @@
     margin-left: 4em;
     margin-right: 4em;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     max-width: 1000px;
@@ -18,19 +18,19 @@
     img {
         border-radius: 0.2em;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.664);
-        margin-bottom: 2em;
+        margin-top: 4em;
     }
 
     .formulario-contacto {
         flex: 1 0 250px;
-        padding: 0 2em;
+        padding: 0 1em;
         background-color: rgba(184, 169, 169, 0.37);
         border-radius: 0.2em;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.39);
         text-align: left;
 
         form {
-            margin-top: 1em;
+            margin-bottom: 2em;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -70,8 +70,6 @@
     }   
 }
 
-
-
 @media (min-width: 900px) {
     .contactate {
         text-align: left;
@@ -82,6 +80,7 @@
         align-items: center;
 
         img {
+            margin-top: 0;
             margin-bottom: 0;
             max-width: 90vw;
         }
@@ -89,7 +88,7 @@
 }
 
 @media (min-width: 1050px) {
-    .others-sections {
+    .contacto {
         @include sections;
     }
     .foto-formulario {
