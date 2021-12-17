@@ -118,27 +118,31 @@ header {
 }
 
 @media (min-width: 749px) {
-    nav {
-        .nav__menu {
-            flex-wrap: nowrap;
-            li {
-                a {
-                    min-width: 120px;
+    header{
+        nav {
+            .nav__menu {
+                flex-wrap: nowrap;
+                li {
+                    a {
+                        min-width: 120px;
+                    }
                 }
             }
-        }
-    }    
+        }    
+    }
 }
 
 @media (min-width: 900px) {
-    nav {
-        .nav__menu {
-            flex-wrap: wrap;
-            li {
-                a {
-                    min-width: 150px;
+    header{
+        nav {
+            .nav__menu {
+                flex-wrap: wrap;
+                li {
+                    a {
+                        min-width: 150px;
+                    }
                 }
             }
-        }
-    }    
+        }    
+    }
 }

@@ -223,21 +223,21 @@ header nav .nav__menu li .menu__submenu {
 }
 
 @media (min-width: 749px) {
-  nav .nav__menu {
+  header nav .nav__menu {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  nav .nav__menu li a {
+  header nav .nav__menu li a {
     min-width: 120px;
   }
 }
 
 @media (min-width: 900px) {
-  nav .nav__menu {
+  header nav .nav__menu {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  nav .nav__menu li a {
+  header nav .nav__menu li a {
     min-width: 150px;
   }
 }
